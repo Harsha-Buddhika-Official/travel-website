@@ -52,7 +52,7 @@ export default function Destinations() {
           </Link>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 auto-rows-[200px] sm:auto-rows-[240px] md:auto-rows-[280px] gap-4 md:gap-5 grid-flow-row-dense">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 auto-rows-50 sm:auto-rows-60 md:auto-rows-70 gap-4 md:gap-5 grid-flow-row-dense">
           {destinations.map((d, i) => (
             <div
               key={d.id}

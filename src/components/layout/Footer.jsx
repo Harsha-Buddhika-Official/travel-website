@@ -15,9 +15,9 @@ const socials = [
 
 export default function Footer() {
   return (
-    <footer className="bg-stone-900 text-white pt-20 pb-8 px-6">
+    <footer className="bg-stone-900 text-white pt-20 pb-8 px-4 sm:px-6">
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-2 md:grid-cols-6 gap-10 mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-6 gap-10 mb-16">
           <div className="col-span-2">
             <a href="#hero" className="text-xl font-semibold tracking-tight flex items-center gap-2 mb-4">
               <ExploreIcon sx={{ fontSize: 22 }} />

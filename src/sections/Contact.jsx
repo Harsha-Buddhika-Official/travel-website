@@ -23,9 +23,9 @@ export default function Contact({ onNavigate }) {
   };
 
   return (
-    <section id="contact" ref={ref} className="py-24 md:py-32 px-6">
+    <section id="contact" ref={ref} className="py-20 sm:py-24 md:py-32 px-4 sm:px-6">
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 sm:gap-12 lg:gap-20">
           <div className={visible ? "anim-slide-left" : "opacity-0"}>
             <span className="inline-block text-xs font-semibold text-stone-500 uppercase tracking-widest mb-3">Get In Touch</span>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight mb-6">
@@ -49,7 +49,7 @@ export default function Contact({ onNavigate }) {
             </div>
           </div>
 
-          <form onSubmit={handleSubmit} className={`bg-white rounded-3xl p-8 shadow-sm ${visible ? "anim-slide-right" : "opacity-0"}`} style={{ animationDelay: "0.2s" }}>
+          <form onSubmit={handleSubmit} className={`bg-white rounded-3xl p-6 sm:p-8 shadow-sm ${visible ? "anim-slide-right" : "opacity-0"}`} style={{ animationDelay: "0.2s" }}>
             <div className="space-y-5">
               <div>
                 <label className="block text-xs font-semibold text-stone-500 uppercase tracking-wider mb-2">Name</label>

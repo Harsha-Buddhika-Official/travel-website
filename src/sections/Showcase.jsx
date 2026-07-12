@@ -17,15 +17,15 @@ export default function Showcase() {
   const [ref, visible] = useIntersectionObserver({ threshold: 0.15 });
 
   return (
-    <section ref={ref} className="py-24 md:py-32 px-6">
+    <section ref={ref} className="py-20 sm:py-24 md:py-32 px-4 sm:px-6">
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 sm:gap-12 lg:gap-20 items-center">
           <div className={`relative ${visible ? "anim-slide-left" : "opacity-0"}`}>
             <div className="relative rounded-3xl overflow-hidden shadow-2xl">
-              <img src="https://img.magnific.com/premium-photo/travel-sri-lanka_1892-35.jpg?semt=ais_hybrid&w=740&q=80" alt="Traveler" className="w-full h-[500px] md:h-[600px] object-cover" />
-              <div className="absolute inset-0 bg-gradient-to-t from-stone-900/30 to-transparent" />
+              <img src="https://img.magnific.com/premium-photo/travel-sri-lanka_1892-35.jpg?semt=ais_hybrid&w=740&q=80" alt="Traveler" className="w-full h-90 sm:h-125 md:h-150 object-cover" />
+              <div className="absolute inset-0 bg-linear-to-t from-stone-900/30 to-transparent" />
             </div>
-            <div className="absolute -bottom-6 -right-4 md:right-6 bg-white/70 backdrop-blur-2xl border border-white/80 rounded-2xl p-5 shadow-xl anim-float max-w-[220px]">
+            <div className="hidden lg:block absolute -bottom-6 -right-4 md:right-6 bg-white/70 backdrop-blur-2xl border border-white/80 rounded-2xl p-5 shadow-xl anim-float max-w-55">
               <div className="flex items-center gap-3 mb-3">
                 <div className="flex -space-x-2">
                   {[1, 2, 3, 4].map((i) => (
@@ -41,7 +41,7 @@ export default function Showcase() {
                 <span className="text-xs font-medium text-stone-700 ml-1">4.9/5</span>
               </div>
             </div>
-            <div className="absolute top-6 -left-4 md:left-6 bg-white/70 backdrop-blur-2xl border border-white/80 rounded-2xl px-4 py-3 shadow-xl anim-float" style={{ animationDelay: "1s" }}>
+            <div className="hidden lg:block absolute top-6 -left-4 md:left-6 bg-white/70 backdrop-blur-2xl border border-white/80 rounded-2xl px-4 py-3 shadow-xl anim-float" style={{ animationDelay: "1s" }}>
               <div className="flex items-center gap-2">
                 <div className="w-8 h-8 bg-emerald-400/20 rounded-lg flex items-center justify-center">
                   <TrendingUpIcon sx={{ fontSize: 14 }} className="text-emerald-500" />
@@ -62,7 +62,7 @@ export default function Showcase() {
             <p className={`text-stone-500 font-light leading-relaxed mb-10 ${visible ? "anim-fade-in-up" : "opacity-0"}`} style={{ animationDelay: "0.2s" }}>
                 We take care of every detail so you can simply enjoy the wonders of Sri Lanka. From ancient heritage and lush hill country to pristine beaches and unforgettable wildlife, every journey is crafted for memories that last a lifetime.
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
               {features.map((f, i) => (
                 <div key={f.title} className={visible ? "anim-fade-in-up" : "opacity-0"} style={{ animationDelay: `${0.3 + i * 0.1}s` }}>
                   <div className="flex items-start gap-3">

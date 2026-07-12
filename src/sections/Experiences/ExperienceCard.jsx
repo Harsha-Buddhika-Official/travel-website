@@ -12,7 +12,7 @@ export default function ExperienceCard({ experience, index, visible }) {
     >
       <div className="relative h-56 overflow-hidden shrink-0">
         <img src={img} alt={title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+        <div className="absolute inset-0 bg-linear-to-t from-black/40 to-transparent" />
         <span className="absolute top-4 left-4 bg-black/30 backdrop-blur-md border border-white/10 rounded-full px-3 py-1.5 text-[10px] font-semibold text-white uppercase tracking-wider">
           {tag}
         </span>

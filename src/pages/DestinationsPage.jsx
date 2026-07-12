@@ -45,7 +45,8 @@ export default function DestinationsPage({ onNavigate }) {
     <div className="bg-stone-50 text-stone-900" style={{ fontFamily: "'Inter', sans-serif" }}>
       <Navbar onNavigate={onNavigate} />
 
-      <section className="relative h-[60vh] min-h-[440px] flex items-end overflow-hidden">
+      {/* ── Hero ── */}
+      <section className="relative h-[46vh] xs:h-[52vh] sm:h-[60vh] min-h-[380px] sm:min-h-[440px] flex items-end overflow-hidden">
         <img
           src="https://picsum.photos/seed/wanderly-destinations-hero/1920/1080.jpg"
           alt="Aerial view of a coastal destination"
@@ -56,22 +57,22 @@ export default function DestinationsPage({ onNavigate }) {
           style={{ background: "linear-gradient(to right, #1c1917, rgba(28,25,23,0.85), rgba(28,25,23,0.45))" }}
         />
         <div
-          className="absolute bottom-0 left-0 right-0 h-24"
+          className="absolute bottom-0 left-0 right-0 h-20 sm:h-24"
           style={{ background: "linear-gradient(to top, #f5f5f4, transparent)" }}
         />
 
-        <div className="relative z-10 max-w-7xl mx-auto px-6 pb-14 w-full">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 pb-8 sm:pb-14 w-full">
           <button
             type="button"
             onClick={() => navigate("/")}
-            className="anim-fade-in opacity-0 inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-4 py-2 text-xs font-medium text-white/90 hover:bg-white/20 transition-all duration-300 mb-6"
+            className="anim-fade-in opacity-0 inline-flex items-center gap-1.5 sm:gap-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-3 sm:px-4 py-1.5 sm:py-2 text-[11px] sm:text-xs font-medium text-white/90 hover:bg-white/20 transition-all duration-300 mb-4 sm:mb-6"
           >
             <ArrowBackIcon sx={{ fontSize: 14 }} />
             Back to home
           </button>
 
           <span
-            className="anim-fade-in-up opacity-0 inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-4 py-2 text-xs font-medium text-white/90 uppercase tracking-wider mb-6"
+            className="anim-fade-in-up opacity-0 inline-flex items-center gap-1.5 sm:gap-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-3 sm:px-4 py-1.5 sm:py-2 text-[9px] sm:text-xs font-medium text-white/90 uppercase tracking-wider mb-4 sm:mb-6"
             style={{ animationDelay: "0.1s" }}
           >
             <TravelExploreIcon sx={{ fontSize: 12 }} />
@@ -79,13 +80,13 @@ export default function DestinationsPage({ onNavigate }) {
           </span>
 
           <h1
-            className="anim-fade-in-up opacity-0 text-3xl md:text-4xl lg:text-6xl font-medium text-white tracking-tight leading-[1.1] mb-4 max-w-2xl"
+            className="anim-fade-in-up opacity-0 text-2xl xs:text-3xl md:text-4xl lg:text-6xl font-medium text-white tracking-tight leading-[1.1] mb-3 sm:mb-4 max-w-2xl"
             style={{ animationDelay: "0.2s" }}
           >
             Every place we <span className="italic font-normal text-white/80">recommend</span>
           </h1>
           <p
-            className="anim-fade-in-up opacity-0 text-white/70 font-light leading-relaxed max-w-lg"
+            className="anim-fade-in-up opacity-0 text-sm sm:text-base text-white/70 font-light leading-relaxed max-w-lg"
             style={{ animationDelay: "0.3s" }}
           >
             {destinations.length} curated destinations, hand-picked by our local experts across every continent.
@@ -93,11 +94,15 @@ export default function DestinationsPage({ onNavigate }) {
         </div>
       </section>
 
-      <section className="px-6 relative z-20">
-        <div className="max-w-5xl mx-auto -mt-8">
-          <div className="bg-white/80 backdrop-blur-2xl border border-white/80 rounded-3xl p-3 shadow-xl anim-scale-in opacity-0" style={{ animationDelay: "0.4s" }}>
+      {/* ── Search / sort card ── */}
+      <section className="px-4 sm:px-6 relative z-20">
+        <div className="max-w-5xl mx-auto -mt-6 sm:-mt-8">
+          <div
+            className="bg-white/80 backdrop-blur-2xl border border-white/80 rounded-2xl sm:rounded-3xl p-2.5 sm:p-3 shadow-xl anim-scale-in opacity-0"
+            style={{ animationDelay: "0.4s" }}
+          >
             <div className="flex flex-col md:flex-row items-stretch md:items-center gap-2">
-              <div className="flex-1 flex items-center gap-3 px-4 py-3 rounded-2xl hover:bg-stone-100/60 transition-colors">
+              <div className="flex-1 flex items-center gap-3 px-3 sm:px-4 py-2.5 sm:py-3 rounded-xl sm:rounded-2xl hover:bg-stone-100/60 transition-colors">
                 <SearchIcon sx={{ fontSize: 18 }} className="text-emerald-500 shrink-0" />
                 <input
                   type="text"
@@ -108,13 +113,13 @@ export default function DestinationsPage({ onNavigate }) {
                 />
               </div>
               <div className="hidden md:block w-px h-10 bg-stone-200" />
-              <div className="flex items-center gap-1 px-2 overflow-x-auto">
+              <div className="flex items-center gap-1 px-1 sm:px-2 overflow-x-auto -mx-1 sm:mx-0 pb-1 sm:pb-0 [&::-webkit-scrollbar]:hidden">
                 {sortOptions.map((option) => (
                   <button
                     key={option}
                     type="button"
                     onClick={() => setActiveSort(option)}
-                    className={`whitespace-nowrap text-xs font-medium px-4 py-2.5 rounded-full transition-all duration-300 ${
+                    className={`shrink-0 whitespace-nowrap text-[11px] sm:text-xs font-medium px-3 sm:px-4 py-2 sm:py-2.5 rounded-full transition-all duration-300 ${
                       activeSort === option
                         ? "bg-stone-900 text-white"
                         : "text-stone-500 hover:text-stone-900 hover:bg-stone-100"
@@ -129,21 +134,22 @@ export default function DestinationsPage({ onNavigate }) {
         </div>
       </section>
 
-      <section ref={gridRef} className="py-16 md:py-24 px-6">
+      {/* ── Results grid ── */}
+      <section ref={gridRef} className="py-12 sm:py-16 md:py-24 px-4 sm:px-6">
         <div className="max-w-7xl mx-auto">
-          <div className={`flex items-center gap-2 mb-8 ${gridVisible ? "anim-fade-in" : "opacity-0"}`}>
-            <PublicIcon sx={{ fontSize: 16 }} className="text-emerald-500" />
-            <p className="text-sm text-stone-500 font-light">
+          <div className={`flex items-center gap-2 mb-6 sm:mb-8 ${gridVisible ? "anim-fade-in" : "opacity-0"}`}>
+            <PublicIcon sx={{ fontSize: 16 }} className="text-emerald-500 shrink-0" />
+            <p className="text-xs sm:text-sm text-stone-500 font-light">
               Showing <span className="font-medium text-stone-800">{filtered.length}</span> of {destinations.length} destinations
             </p>
           </div>
 
           {filtered.length > 0 ? (
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
               {filtered.map((d, i) => (
                 <div
-                  key={d.name}
-                  className={`h-80 ${gridVisible ? "anim-fade-in-up" : "opacity-0"}`}
+                  key={d.id}
+                  className={`h-64 xs:h-72 sm:h-80 ${gridVisible ? "anim-fade-in-up" : "opacity-0"}`}
                   style={{ animationDelay: `${Math.min(i, 8) * 0.08}s` }}
                 >
                   <DestinationCard destination={{ ...d, span: "" }} />
@@ -151,11 +157,11 @@ export default function DestinationsPage({ onNavigate }) {
               ))}
             </div>
           ) : (
-            <div className="flex flex-col items-center justify-center text-center py-24 bg-white rounded-3xl border border-stone-200/60">
+            <div className="flex flex-col items-center justify-center text-center py-16 sm:py-24 px-4 bg-white rounded-3xl border border-stone-200/60">
               <div className="w-14 h-14 bg-stone-100 rounded-2xl flex items-center justify-center mb-4">
                 <SearchIcon sx={{ fontSize: 22 }} className="text-stone-400" />
               </div>
-              <h3 className="text-lg font-semibold tracking-tight mb-1">No destinations found</h3>
+              <h3 className="text-base sm:text-lg font-semibold tracking-tight mb-1">No destinations found</h3>
               <p className="text-sm text-stone-500 font-light">Try a different search term or clear your filters.</p>
               <button
                 type="button"
@@ -169,20 +175,21 @@ export default function DestinationsPage({ onNavigate }) {
         </div>
       </section>
 
-      <section className="py-14 px-6 bg-white border-y border-stone-200/50">
-        <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-center gap-10">
+      {/* ── Trust strip ── */}
+      <section className="py-10 sm:py-14 px-4 sm:px-6 bg-white border-y border-stone-200/50">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 xs:grid-cols-3 gap-6 sm:gap-10">
           {[
             { icon: StarIcon, label: "4.9 Rating", sub: "10k+ traveler reviews" },
             { icon: PublicIcon, label: "50+", sub: "Destinations across Sri Lanka" },
             { icon: TravelExploreIcon, label: "500+", sub: "Unique travel experiences" },
           ].map((s) => (
-            <div key={s.label} className="flex items-center gap-3">
-              <div className="w-11 h-11 bg-emerald-400/10 rounded-xl flex items-center justify-center">
+            <div key={s.label} className="flex items-center justify-center xs:justify-start gap-3">
+              <div className="w-10 h-10 sm:w-11 sm:h-11 bg-emerald-400/10 rounded-xl flex items-center justify-center shrink-0">
                 <s.icon sx={{ fontSize: 18 }} className="text-emerald-500" />
               </div>
               <div>
                 <p className="text-sm font-semibold text-stone-800">{s.label}</p>
-                <p className="text-xs text-stone-500 uppercase tracking-wider">{s.sub}</p>
+                <p className="text-[11px] sm:text-xs text-stone-500 uppercase tracking-wider">{s.sub}</p>
               </div>
             </div>
           ))}

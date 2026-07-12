@@ -20,8 +20,8 @@ export default function Navbar({ onNavigate }) {
         scrolled ? "bg-white/85 backdrop-blur-xl shadow-sm border-b border-black/5 py-3" : "py-5"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
-        <Link to="/" className={`text-xl font-semibold tracking-tight flex items-center gap-2 transition-colors duration-300 ${logoColor}`}>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between">
+        <Link to="/" className={`text-lg sm:text-xl font-semibold tracking-tight flex items-center gap-2 transition-colors duration-300 ${logoColor}`}>
           <ExploreIcon sx={{ fontSize: 22 }} />
           Sri Lanka Travel
         </Link>
@@ -58,7 +58,7 @@ export default function Navbar({ onNavigate }) {
         <button
           type="button"
           onClick={() => setMobileOpen((prev) => !prev)}
-          className={`md:hidden p-2 ${logoColor}`}
+          className={`md:hidden p-2 rounded-lg ${logoColor}`}
           aria-label={mobileOpen ? "Close menu" : "Open menu"}
         >
           {mobileOpen ? <CloseIcon sx={{ fontSize: 22 }} /> : <MenuIcon sx={{ fontSize: 22 }} />}
@@ -66,7 +66,7 @@ export default function Navbar({ onNavigate }) {
       </div>
 
       {mobileOpen && (
-        <div className="md:hidden mt-3 mx-6 bg-black/30 backdrop-blur-md border border-white/10 rounded-2xl p-6 anim-fade-in">
+        <div className="md:hidden mt-3 mx-4 sm:mx-6 bg-black/30 backdrop-blur-md border border-white/10 rounded-2xl p-5 sm:p-6 anim-fade-in max-h-[calc(100vh-5rem)] overflow-y-auto">
           {navLinks.map((link) => (
             <a
               key={link}

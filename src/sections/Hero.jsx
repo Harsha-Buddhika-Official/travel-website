@@ -58,14 +58,14 @@ export default function Hero({ onNavigate }) {
   const nextSlide = () => setSlide((prev) => (prev + 1) % heroSlides.length);
 
   return (
-    <section id="hero" className="relative h-screen min-h-[700px] flex items-center overflow-hidden">
+    <section id="hero" className="relative h-svh sm:h-screen min-h-155 sm:min-h-175 flex items-center overflow-hidden">
       <div className="absolute inset-0">
         {heroSlides.map((s, i) => (
           <img
             key={s.img}
             src={s.img}
             alt={s.alt}
-            className="absolute inset-0 w-full h-full object-cover transition-opacity duration-[1000ms] ease-in-out"
+            className="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out"
             style={{
               opacity: i === slide ? 1 : 0,
               transform: i === slide ? "scale(1.06)" : "scale(1)",
@@ -119,16 +119,16 @@ export default function Hero({ onNavigate }) {
         ))}
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 w-full">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 w-full pt-24 sm:pt-0">
         <div className="max-w-2xl">
           <div className="anim-fade-in-up opacity-0" style={{ animationDelay: "0.1s" }}>
-            <span className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-4 py-2 text-xs font-medium text-white/90 uppercase tracking-wider mb-6">
+            <span className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-3 sm:px-4 py-2 text-[10px] sm:text-xs font-medium text-white/90 uppercase tracking-wider mb-5 sm:mb-6">
               <AutoAwesomeIcon sx={{ fontSize: 12 }} />
               Your Next Adventure Awaits
             </span>
           </div>
           <h1
-            className="anim-fade-in-up opacity-0 text-4xl md:text-5xl lg:text-7xl font-medium text-white tracking-tight leading-[1.1] mb-6"
+            className="anim-fade-in-up opacity-0 text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-medium text-white tracking-tight leading-[1.08] sm:leading-[1.1] mb-5 sm:mb-6"
             style={{ animationDelay: "0.2s" }}
           >
             Discover the
@@ -136,7 +136,7 @@ export default function Hero({ onNavigate }) {
             <span className="italic font-normal text-white/90">beautiful</span> places
           </h1>
           <p
-            className="anim-fade-in-up opacity-0 text-base md:text-lg text-white/70 font-light leading-relaxed mb-10 max-w-lg"
+            className="anim-fade-in-up opacity-0 text-sm sm:text-base md:text-lg text-white/70 font-light leading-relaxed mb-8 sm:mb-10 max-w-lg"
             style={{ animationDelay: "0.3s" }}
           >
             Discover the beauty of Sri Lanka through unforgettable journeys. From ancient heritage sites and misty mountains to golden beaches and wildlife adventures, we create travel experiences that inspire.

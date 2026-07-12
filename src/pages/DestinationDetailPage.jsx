@@ -26,7 +26,7 @@ export default function DestinationDetailPage({ onNavigate }) {
     return (
       <div className="bg-stone-50 text-stone-900 min-h-screen flex flex-col" style={{ fontFamily: "'Inter', sans-serif" }}>
         <Navbar onNavigate={onNavigate} />
-        <div className="flex-1 flex flex-col items-center justify-center px-6 py-32 text-center">
+        <div className="flex-1 flex flex-col items-center justify-center px-4 sm:px-6 py-24 sm:py-32 text-center">
           <div className="w-14 h-14 bg-stone-100 rounded-2xl flex items-center justify-center mb-4">
             <PlaceIcon sx={{ fontSize: 22 }} className="text-stone-400" />
           </div>
@@ -49,7 +49,7 @@ export default function DestinationDetailPage({ onNavigate }) {
       <Navbar onNavigate={onNavigate} />
 
       {/* Hero */}
-      <section className="relative h-[70vh] min-h-[520px] flex items-end overflow-hidden">
+      <section className="relative h-[58vh] sm:h-[70vh] min-h-[420px] sm:min-h-[520px] flex items-end overflow-hidden">
         <img src={destination.img} alt={destination.name} className="absolute inset-0 w-full h-full object-cover" />
         <div
           className="absolute inset-0"
@@ -60,7 +60,7 @@ export default function DestinationDetailPage({ onNavigate }) {
           style={{ background: "linear-gradient(to top, #f5f5f4, transparent)" }}
         />
 
-        <div className="relative z-10 max-w-7xl mx-auto px-6 pb-14 w-full">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 pb-10 sm:pb-14 w-full">
           <button
             type="button"
             onClick={() => navigate("/destinations")}
@@ -71,7 +71,7 @@ export default function DestinationDetailPage({ onNavigate }) {
           </button>
 
           <div
-            className="anim-fade-in-up opacity-0 flex items-center gap-2 mb-4"
+            className="anim-fade-in-up opacity-0 flex flex-wrap items-center gap-2 mb-4"
             style={{ animationDelay: "0.1s" }}
           >
             <span className="bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-3 py-1 text-[10px] font-medium text-white uppercase tracking-wider flex items-center gap-1">
@@ -84,7 +84,7 @@ export default function DestinationDetailPage({ onNavigate }) {
           </div>
 
           <h1
-            className="anim-fade-in-up opacity-0 text-3xl md:text-4xl lg:text-6xl font-medium text-white tracking-tight leading-[1.1] mb-3"
+            className="anim-fade-in-up opacity-0 text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-medium text-white tracking-tight leading-[1.08] sm:leading-[1.1] mb-3"
             style={{ animationDelay: "0.2s" }}
           >
             {destination.name}
@@ -100,9 +100,9 @@ export default function DestinationDetailPage({ onNavigate }) {
       </section>
 
       {/* Floating stat card, overlapping hero like the search bento cards elsewhere */}
-      <section className="px-6 relative z-20">
+      <section className="px-4 sm:px-6 relative z-20">
         <div className="max-w-5xl mx-auto -mt-8">
-          <div className="bg-white/80 backdrop-blur-2xl border border-white/80 rounded-3xl p-6 shadow-xl anim-scale-in opacity-0 grid grid-cols-2 md:grid-cols-4 gap-6" style={{ animationDelay: "0.4s" }}>
+          <div className="bg-white/80 backdrop-blur-2xl border border-white/80 rounded-3xl p-4 sm:p-6 shadow-xl anim-scale-in opacity-0 grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6" style={{ animationDelay: "0.4s" }}>
             <div>
               <p className="text-[10px] text-stone-500 uppercase tracking-wider mb-1">From</p>
               <p className="text-lg font-semibold text-stone-900">{destination.price}</p>
@@ -129,7 +129,7 @@ export default function DestinationDetailPage({ onNavigate }) {
         </div>
       </section>
 
-      <section className="py-16 md:py-24 px-6">
+      <section className="py-14 sm:py-16 md:py-24 px-4 sm:px-6">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-12">
           <div className="lg:col-span-2">
             <span className="inline-block text-xs font-semibold text-stone-500 uppercase tracking-widest mb-3">Overview</span>
@@ -155,14 +155,14 @@ export default function DestinationDetailPage({ onNavigate }) {
                   key={src}
                   src={src}
                   alt={`${destination.name} view ${i + 1}`}
-                  className="rounded-2xl w-full h-48 object-cover shadow-sm"
+                  className="rounded-2xl w-full h-40 sm:h-48 object-cover shadow-sm"
                 />
               ))}
             </div>
           </div>
 
           <aside className="lg:col-span-1">
-            <div className="bg-white rounded-3xl p-6 shadow-sm sticky top-24">
+            <div className="bg-white rounded-3xl p-5 sm:p-6 shadow-sm lg:sticky top-24">
               <p className="text-[10px] text-stone-500 uppercase tracking-wider mb-1">Starting from</p>
               <p className="text-3xl font-semibold tracking-tight mb-1">{destination.price}</p>
               <p className="text-xs text-stone-500 font-light mb-6">per person, {destination.days.toLowerCase()}</p>
@@ -192,15 +192,15 @@ export default function DestinationDetailPage({ onNavigate }) {
       </section>
 
       {relatedDestinations.length > 0 && (
-        <section className="py-16 md:py-24 px-6 bg-white border-t border-stone-200/50">
+        <section className="py-14 sm:py-16 md:py-24 px-4 sm:px-6 bg-white border-t border-stone-200/50">
           <div className="max-w-7xl mx-auto">
             <span className="inline-block text-xs font-semibold text-stone-500 uppercase tracking-widest mb-3">Keep Exploring</span>
             <h2 className="text-2xl md:text-3xl font-medium tracking-tight mb-10">
               You might also <span className="italic font-normal text-stone-400">like</span>
             </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
               {relatedDestinations.map((d) => (
-                <div key={d.id} className="h-72">
+                <div key={d.id} className="h-72 sm:h-80">
                   <DestinationCard destination={{ ...d, span: "" }} />
                 </div>
               ))}
