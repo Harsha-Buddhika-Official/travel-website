@@ -1,41 +1,22 @@
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(18px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+/* Global keyframes — Tailwind utilities alone can't define custom keyframes */
+@keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes slideInLeft { from { opacity: 0; transform: translateX(-40px); } to { opacity: 1; transform: translateX(0); } }
+@keyframes slideInRight { from { opacity: 0; transform: translateX(40px); } to { opacity: 1; transform: translateX(0); } }
+@keyframes scaleIn { from { opacity: 0; transform: scale(0.9); } to { opacity: 1; transform: scale(1); } }
+@keyframes floatY { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+@keyframes marqueeX { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
 
-@keyframes drift {
-  0%,
-  100% {
-    transform: translate3d(0, 0, 0);
-  }
-  50% {
-    transform: translate3d(0, -10px, 0);
-  }
-}
+.anim-fade-in-up { animation: fadeInUp 0.8s ease-out forwards; }
+.anim-fade-in { animation: fadeIn 0.6s ease-out forwards; }
+.anim-slide-left { animation: slideInLeft 0.8s ease-out forwards; }
+.anim-slide-right { animation: slideInRight 0.8s ease-out forwards; }
+.anim-scale-in { animation: scaleIn 0.6s ease-out forwards; }
+.anim-float { animation: floatY 3s ease-in-out infinite; }
+.marquee-track { display: flex; animation: marqueeX 30s linear infinite; }
 
-@keyframes marquee {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
-}
-
-.reveal {
-  animation: fadeUp 0.7s ease both;
-}
-
-.floaty {
-  animation: drift 8s ease-in-out infinite;
-}
-
-.marquee-track {
-  animation: marquee 28s linear infinite;
-}
+html { scroll-behavior: smooth; }
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #f5f5f4; }
+::-webkit-scrollbar-thumb { background: #a8a29e; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #78716c; }

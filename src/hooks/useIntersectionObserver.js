@@ -1,27 +1,21 @@
-import { useEffect, useRef, useState } from 'react'
+import { useState, useEffect, useRef } from "react";
 
-export default function useIntersectionObserver(options = {}) {
-  const targetRef = useRef(null)
-  const [isVisible, setIsVisible] = useState(false)
+export function useIntersectionObserver(options = { threshold: 0.1 }) {
+  const [isVisible, setIsVisible] = useState(false);
+  const ref = useRef(null);
 
   useEffect(() => {
-    const element = targetRef.current
-
-    if (!element || typeof IntersectionObserver === 'undefined') {
-      setIsVisible(true)
-      return undefined
-    }
+    const node = ref.current;
+    if (!node) return undefined;
 
     const observer = new IntersectionObserver(([entry]) => {
-      setIsVisible(entry.isIntersecting)
-    }, options)
+      if (entry.isIntersecting) setIsVisible(true);
+    }, options);
 
-    observer.observe(element)
+    observer.observe(node);
+    return () => observer.disconnect();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
-    return () => {
-      observer.disconnect()
-    }
-  }, [options.root, options.rootMargin, options.threshold])
-
-  return [targetRef, isVisible]
+  return [ref, isVisible];
 }

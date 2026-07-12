@@ -1,20 +1,5 @@
 export const testimonials = [
-  {
-    id: 'maya',
-    quote: 'The itinerary felt thoughtful from start to finish. Nothing was rushed, and every stop felt intentional.',
-    author: 'Maya R.',
-    role: 'Weekend traveler',
-  },
-  {
-    id: 'daniel',
-    quote: 'It was the first trip where I never had to guess what came next. The pacing made the whole experience better.',
-    author: 'Daniel K.',
-    role: 'Remote designer',
-  },
-  {
-    id: 'sophie',
-    quote: 'Beautiful destinations are easy to find. What stood out here was the clarity and calm of the experience.',
-    author: 'Sophie L.',
-    role: 'Family explorer',
-  },
-]
+  { name: "Sarah Chen", role: "Digital Nomad", text: "Wanderly completely transformed how I travel. The curated experiences felt personal and authentic — nothing like typical tourist packages.", img: "wanderly-sarah-face", location: "Bali, Indonesia" },
+  { name: "Marcus Rivera", role: "Photographer", text: "The photography trip to Patagonia was life-changing. Every detail was perfectly planned, letting me focus entirely on capturing the moment.", img: "wanderly-marcus-face", location: "Patagonia, Argentina" },
+  { name: "Emma Lindqvist", role: "Food Blogger", text: "The culinary tour through Morocco opened my eyes to flavors I never knew existed. Absolutely magical experience from start to finish.", img: "wanderly-emma-face", location: "Marrakech, Morocco" },
+];

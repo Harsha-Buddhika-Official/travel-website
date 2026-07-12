@@ -1,49 +1,30 @@
-import { useCallback, useEffect, useRef, useState } from 'react'
+import { useState, useCallback, useRef, useEffect } from "react";
 
-export default function useToast() {
-  const [toasts, setToasts] = useState([])
-  const timersRef = useRef(new Map())
+const TOAST_DURATION_MS = 4000;
 
-  const removeToast = useCallback((id) => {
-    setToasts((currentToasts) => currentToasts.filter((toast) => toast.id !== id))
-
-    const timer = timersRef.current.get(id)
-    if (timer) {
-      window.clearTimeout(timer)
-      timersRef.current.delete(id)
-    }
-  }, [])
+/**
+ * Centralizes toast state so any section can trigger a notification
+ * without prop-drilling setState through the tree.
+ */
+export function useToast(duration = TOAST_DURATION_MS) {
+  const [toast, setToast] = useState({ show: false, message: "" });
+  const timerRef = useRef(null);
 
   const showToast = useCallback(
-    (message, type = 'info', duration = 3500) => {
-      const id = window.crypto?.randomUUID?.() ?? `${Date.now()}-${Math.random().toString(16).slice(2)}`
-      const toast = { id, message, type }
-
-      setToasts((currentToasts) => [...currentToasts, toast])
-
-      const timer = window.setTimeout(() => {
-        removeToast(id)
-      }, duration)
-
-      timersRef.current.set(id, timer)
-
-      return id
+    (message) => {
+      setToast({ show: true, message });
+      if (timerRef.current) clearTimeout(timerRef.current);
+      timerRef.current = setTimeout(() => setToast({ show: false, message: "" }), duration);
     },
-    [removeToast],
-  )
+    [duration]
+  );
 
-  const clearToasts = useCallback(() => {
-    setToasts([])
-    timersRef.current.forEach((timer) => window.clearTimeout(timer))
-    timersRef.current.clear()
-  }, [])
+  const hideToast = useCallback(() => {
+    setToast({ show: false, message: "" });
+    if (timerRef.current) clearTimeout(timerRef.current);
+  }, []);
 
-  useEffect(() => clearToasts, [clearToasts])
+  useEffect(() => () => { if (timerRef.current) clearTimeout(timerRef.current); }, []);
 
-  return {
-    toasts,
-    showToast,
-    removeToast,
-    clearToasts,
-  }
+  return { toast, showToast, hideToast };
 }
