@@ -5,11 +5,6 @@ import { useIntersectionObserver } from "../../hooks/useIntersectionObserver";
 import { destinations } from "../../data/destinations";
 import DestinationCard from "./DestinationCard";
 
-/**
- * Trailing bento tile that closes out the grid. Keeping the destination
- * count + CTA card as the final cell makes the total tile count even,
- * so grid-flow-row-dense has no leftover cell to leave blank.
- */
 function ExploreMoreCard() {
   return (
     <Link
@@ -57,8 +52,6 @@ export default function Destinations() {
           </Link>
         </div>
 
-        {/* grid-flow-row-dense backfills any gaps left by the col-span-2/row-span-2
-            tiles instead of skipping cells — this is what fixes the empty holes */}
         <div className="grid grid-cols-2 md:grid-cols-4 auto-rows-[200px] sm:auto-rows-[240px] md:auto-rows-[280px] gap-4 md:gap-5 grid-flow-row-dense">
           {destinations.map((d, i) => (
             <div

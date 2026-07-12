@@ -45,7 +45,6 @@ export default function DestinationsPage({ onNavigate }) {
     <div className="bg-stone-50 text-stone-900" style={{ fontFamily: "'Inter', sans-serif" }}>
       <Navbar onNavigate={onNavigate} />
 
-      {/* ── Hero banner ── */}
       <section className="relative h-[60vh] min-h-[440px] flex items-end overflow-hidden">
         <img
           src="https://picsum.photos/seed/wanderly-destinations-hero/1920/1080.jpg"
@@ -94,7 +93,6 @@ export default function DestinationsPage({ onNavigate }) {
         </div>
       </section>
 
-      {/* ── Floating search / filter card, overlapping hero like the Hero search bar ── */}
       <section className="px-6 relative z-20">
         <div className="max-w-5xl mx-auto -mt-8">
           <div className="bg-white/80 backdrop-blur-2xl border border-white/80 rounded-3xl p-3 shadow-xl anim-scale-in opacity-0" style={{ animationDelay: "0.4s" }}>
@@ -131,7 +129,6 @@ export default function DestinationsPage({ onNavigate }) {
         </div>
       </section>
 
-      {/* ── Results grid ── */}
       <section ref={gridRef} className="py-16 md:py-24 px-6">
         <div className="max-w-7xl mx-auto">
           <div className={`flex items-center gap-2 mb-8 ${gridVisible ? "anim-fade-in" : "opacity-0"}`}>
@@ -172,7 +169,6 @@ export default function DestinationsPage({ onNavigate }) {
         </div>
       </section>
 
-      {/* ── Trust strip, echoes the Hero badges pattern ── */}
       <section className="py-14 px-6 bg-white border-y border-stone-200/50">
         <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-center gap-10">
           {[

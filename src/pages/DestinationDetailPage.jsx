@@ -48,7 +48,7 @@ export default function DestinationDetailPage({ onNavigate }) {
     <div className="bg-stone-50 text-stone-900" style={{ fontFamily: "'Inter', sans-serif" }}>
       <Navbar onNavigate={onNavigate} />
 
-      {/* ── Hero ── */}
+      {/* Hero */}
       <section className="relative h-[70vh] min-h-[520px] flex items-end overflow-hidden">
         <img src={destination.img} alt={destination.name} className="absolute inset-0 w-full h-full object-cover" />
         <div
@@ -99,7 +99,7 @@ export default function DestinationDetailPage({ onNavigate }) {
         </div>
       </section>
 
-      {/* ── Floating stat card, overlapping hero like the search bento cards elsewhere ── */}
+      {/* Floating stat card, overlapping hero like the search bento cards elsewhere */}
       <section className="px-6 relative z-20">
         <div className="max-w-5xl mx-auto -mt-8">
           <div className="bg-white/80 backdrop-blur-2xl border border-white/80 rounded-3xl p-6 shadow-xl anim-scale-in opacity-0 grid grid-cols-2 md:grid-cols-4 gap-6" style={{ animationDelay: "0.4s" }}>
@@ -129,7 +129,6 @@ export default function DestinationDetailPage({ onNavigate }) {
         </div>
       </section>
 
-      {/* ── Overview + booking card ── */}
       <section className="py-16 md:py-24 px-6">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-12">
           <div className="lg:col-span-2">
@@ -192,7 +191,6 @@ export default function DestinationDetailPage({ onNavigate }) {
         </div>
       </section>
 
-      {/* ── Related destinations ── */}
       {relatedDestinations.length > 0 && (
         <section className="py-16 md:py-24 px-6 bg-white border-t border-stone-200/50">
           <div className="max-w-7xl mx-auto">
