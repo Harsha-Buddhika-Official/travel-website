@@ -20,6 +20,30 @@ const trustBadges = [
 
 const searchTabs = ["Stays", "Flights", "Experiences", "Cars"];
 
+function ScrollIndicator() {
+  const scrollToNextSection = () => {
+    const heroHeight = document.getElementById("hero")?.offsetHeight ?? window.innerHeight;
+    window.scrollTo({ top: heroHeight, behavior: "smooth" });
+  };
+
+  return (
+    <button
+      type="button"
+      onClick={scrollToNextSection}
+      aria-label="Scroll to explore"
+      className="hidden sm:flex absolute bottom-24 left-1/2 -translate-x-1/2 z-20 flex-col items-center gap-2 anim-fade-in opacity-0 group cursor-pointer"
+      style={{ animationDelay: "0.8s" }}
+    >
+      <span className="text-white/50 text-[10px] font-medium uppercase tracking-widest group-hover:text-white/80 transition-colors duration-300">
+        Scroll
+      </span>
+      <span className="w-6 h-10 rounded-full border-2 border-white/30 group-hover:border-emerald-400/60 flex justify-center pt-2 transition-colors duration-300">
+        <span className="w-1 h-2 rounded-full bg-emerald-400 anim-scroll-wheel" />
+      </span>
+    </button>
+  );
+}
+
 export default function Hero({ onNavigate }) {
   const [activeTab, setActiveTab] = useState("Stays");
   const [slide, setSlide] = useState(0);
@@ -41,12 +65,12 @@ export default function Hero({ onNavigate }) {
             key={s.img}
             src={s.img}
             alt={s.alt}
-            className="absolute inset-0 w-full h-full object-cover transition-opacity duration-[1500ms] ease-in-out"
+            className="absolute inset-0 w-full h-full object-cover transition-opacity duration-[1000ms] ease-in-out"
             style={{
               opacity: i === slide ? 1 : 0,
               transform: i === slide ? "scale(1.06)" : "scale(1)",
               transitionProperty: "opacity, transform",
-              transitionDuration: "1500ms, 8000ms",
+              transitionDuration: "1000ms, 8000ms",
               transitionTimingFunction: "ease-in-out, ease-out",
             }}
           />
@@ -78,6 +102,8 @@ export default function Hero({ onNavigate }) {
       >
         <ArrowForwardIcon sx={{ fontSize: 18 }} />
       </button>
+
+      <ScrollIndicator />
 
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex items-center gap-2">
         {heroSlides.map((s, i) => (
@@ -115,70 +141,10 @@ export default function Hero({ onNavigate }) {
           >
             Discover the beauty of Sri Lanka through unforgettable journeys. From ancient heritage sites and misty mountains to golden beaches and wildlife adventures, we create travel experiences that inspire.
           </p>
-
-          <div className="anim-fade-in-up opacity-0" style={{ animationDelay: "0.4s" }}>
-            <div className="bg-black/30 backdrop-blur-md border border-white/10 rounded-3xl p-2 max-w-3xl">
-              <div className="flex items-center gap-1 mb-2 px-2 pt-1">
-                {searchTabs.map((tab) => (
-                  <button
-                    key={tab}
-                    type="button"
-                    onClick={() => setActiveTab(tab)}
-                    className={`text-xs font-medium px-4 py-2 rounded-full transition-all duration-300 ${
-                      activeTab === tab ? "bg-stone-900 text-white" : "text-white/60 hover:text-white/90 hover:bg-white/10"
-                    }`}
-                  >
-                    {tab}
-                  </button>
-                ))}
-              </div>
-              <div className="flex flex-col md:flex-row items-stretch md:items-center gap-2">
-                <div className="flex-1 flex items-center gap-3 px-4 py-3 rounded-2xl hover:bg-white/5 transition-colors">
-                  <LocationOnIcon sx={{ fontSize: 18 }} className="text-emerald-400 shrink-0" />
-                  <div className="flex-1">
-                    <p className="text-[10px] text-white/50 uppercase tracking-wider">Where to</p>
-                    <input
-                      type="text"
-                      placeholder="Search destinations..."
-                      className="bg-transparent text-white text-sm font-medium outline-none w-full placeholder:text-white/30"
-                    />
-                  </div>
-                </div>
-                <div className="hidden md:block w-px h-10 bg-white/10" />
-                <div className="flex-1 flex items-center gap-3 px-4 py-3 rounded-2xl hover:bg-white/5 transition-colors">
-                  <CalendarMonthIcon sx={{ fontSize: 18 }} className="text-emerald-400 shrink-0" />
-                  <div className="flex-1">
-                    <p className="text-[10px] text-white/50 uppercase tracking-wider">When</p>
-                    <input
-                      type="text"
-                      placeholder="Add dates..."
-                      className="bg-transparent text-white text-sm font-medium outline-none w-full placeholder:text-white/30"
-                    />
-                  </div>
-                </div>
-                <div className="hidden md:block w-px h-10 bg-white/10" />
-                <div className="flex items-center gap-3 px-4 py-3 rounded-2xl hover:bg-white/5 transition-colors">
-                  <PeopleIcon sx={{ fontSize: 18 }} className="text-emerald-400 shrink-0" />
-                  <div>
-                    <p className="text-[10px] text-white/50 uppercase tracking-wider">Who</p>
-                    <span className="text-white text-sm font-medium">2 Travelers</span>
-                  </div>
-                </div>
-                <button
-                  type="button"
-                  onClick={() => onNavigate("Searching destinations...")}
-                  className="bg-emerald-400 hover:bg-emerald-500 text-stone-900 px-6 py-3.5 rounded-2xl font-medium text-sm transition-all duration-300 hover:scale-105 flex items-center gap-2 shrink-0"
-                >
-                  <SearchIcon sx={{ fontSize: 16 }} />
-                  <span className="hidden sm:inline">Search</span>
-                </button>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
 
-      <div className="hidden lg:flex absolute bottom-20 left-12 z-10 flex-col gap-3 anim-fade-in opacity-0" style={{ animationDelay: "0.6s" }}>
+      <div className="hidden lg:flex absolute bottom-20 right-12 z-10 flex-col gap-3 anim-fade-in opacity-0" style={{ animationDelay: "0.6s" }}>
         {trustBadges.map(({ icon: Icon, label, sub }, i) => (
           <div
             key={label}

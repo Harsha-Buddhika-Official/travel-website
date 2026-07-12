@@ -176,9 +176,9 @@ export default function DestinationsPage({ onNavigate }) {
       <section className="py-14 px-6 bg-white border-y border-stone-200/50">
         <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-center gap-10">
           {[
-            { icon: StarIcon, label: "4.9 Rating", sub: "12k+ reviews" },
-            { icon: PublicIcon, label: "120+", sub: "Countries covered" },
-            { icon: TravelExploreIcon, label: "2,500+", sub: "Curated trips" },
+            { icon: StarIcon, label: "4.9 Rating", sub: "10k+ traveler reviews" },
+            { icon: PublicIcon, label: "50+", sub: "Destinations across Sri Lanka" },
+            { icon: TravelExploreIcon, label: "500+", sub: "Unique travel experiences" },
           ].map((s) => (
             <div key={s.label} className="flex items-center gap-3">
               <div className="w-11 h-11 bg-emerald-400/10 rounded-xl flex items-center justify-center">

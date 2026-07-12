@@ -32,7 +32,7 @@ export default function Contact({ onNavigate }) {
               Let&apos;s plan your <span className="italic font-normal text-stone-400">dream trip</span>
             </h2>
             <p className="text-stone-500 font-light leading-relaxed mb-10">
-              Have questions about a destination or need help planning? Our travel experts are here to help you create the perfect itinerary.
+                Have questions about exploring Sri Lanka or need help planning your journey? Our travel experts are here to help you discover the perfect destinations and create an unforgettable island experience.
             </p>
             <div className="space-y-6">
               {contactInfo.map((c) => {

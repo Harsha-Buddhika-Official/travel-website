@@ -20,8 +20,8 @@ export const destinations = [
     ],
     gallery: [
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3vMzYIbn6TQIFDtxzFzPPNogMsltkwGvbKBZ5IY1hKXPidsyZa2bfivU&s=10",
-      "https://picsum.photos/seed/sigiriya-detail-1/800/600.jpg",
-      "https://picsum.photos/seed/sigiriya-detail-2/800/600.jpg",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEueoIIGlF4k2CiP65QmLB5syiUcQewNRNdCU2xWb_A3GXEJyCthu-SRQ&s=10",
+      "https://media.audleytravel.com/-/media/images/home/indian-subcontinent/sri-lanka/places/gi_1175514640_sigiriya_sunset_3000x1000.jpg?q=60&w=1920&h=685",
     ],
   },
   {
@@ -45,8 +45,8 @@ export const destinations = [
     ],
     gallery: [
       "https://lakpura.com/cdn/shop/files/demodara-nine-arch-bridge-ella-sri-lanka-scaled-1_77c0b1eb-4170-472a-b6df-950903726734.jpg?v=1654085052&width=3840",
-      "https://picsum.photos/seed/ella-detail-1/800/600.jpg",
-      "https://picsum.photos/seed/ella-detail-2/800/600.jpg",
+      "https://c1.wallpaperflare.com/preview/784/803/671/srilanka-ella-landscape-hill.jpg",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcdpIaGnKZlaINEAu_QwmLgv9jU8fgb8UEfA1FpMlOeVh2jalkFtzDT9PP&s=10",
     ],
   },
   {
@@ -70,8 +70,8 @@ export const destinations = [
     ],
     gallery: [
       "https://www.civitatis.com/f/sri-lanka/mirissa/mirissa.jpg",
-      "https://picsum.photos/seed/mirissa-detail-1/800/600.jpg",
-      "https://picsum.photos/seed/mirissa-detail-2/800/600.jpg",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSE1qbMexnq3gL6daMN_bs6LkVlDd5tGUe4gll-sGRzW3YBTZwDA2Xgx9yJ&s=10",
+      "https://i0.wp.com/amazinglanka.com/wp/wp-content/uploads/2025/05/mirissa-02.jpg?ssl=1",
     ],
   },
   {
@@ -95,8 +95,8 @@ export const destinations = [
     ],
     gallery: [
       "https://ak-d.tripcdn.com/images/1mi2h224x90m3yqz71E57_Q90.jpg?proc=source/trip",
-      "https://picsum.photos/seed/nuwara-eliya-detail-1/800/600.jpg",
-      "https://picsum.photos/seed/nuwara-eliya-detail-2/800/600.jpg",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuS572Gf9hImyR4sYAVDpksuyydIgZFimpAzF6ccjbusbDBdFTPUXOng&s=10",
+      "https://images.unsplash.com/photo-1609515286252-3429567a66fd?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8bnV3YXJhJTIwZWxpeWElMjBzcmklMjBsYW5rYXxlbnwwfHwwfHx8MA%3D%3D",
     ],
   },
   {
@@ -120,8 +120,8 @@ export const destinations = [
     ],
     gallery: [
       "https://www.andbeyond.com/wp-content/uploads/sites/5/sri-lanka-leopard-asian.jpg",
-      "https://picsum.photos/seed/yala-detail-1/800/600.jpg",
-      "https://picsum.photos/seed/yala-detail-2/800/600.jpg",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2D7wzKm5ghyJdKDe_bDgMxFJZzIiVjc7rrzKh2BgQOXfBP_cl2Jx7SvbT&s=10",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRspAqeDNGR9pXkAbWF1kSYoJvgQFonsZnhrC4JBocSu29vl78GnmxQ9tqQ&s=10",
     ],
   },
   {
@@ -145,8 +145,8 @@ export const destinations = [
     ],
     gallery: [
       "https://do6raq9h04ex.cloudfront.net/sites/8/2021/07/galle-fort-1050x700-1.jpg",
-      "https://picsum.photos/seed/galle-fort-detail-1/800/600.jpg",
-      "https://picsum.photos/seed/galle-fort-detail-2/800/600.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/d/df/GALLE_FORT_AND_LIGHTHOUSE_GALLE_SRI_LANKA_JAN2013_%288510167078%29.jpg",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQb-oIj9BhnLM4W9wTqlsGpqNRwlaS4uW5bWKNE-t-EFKlrP9RjwuIs0_8&s=10",
     ],
   },
   {
@@ -170,8 +170,33 @@ export const destinations = [
     ],
     gallery: [
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOenFRJNRwhtV0hGyngdsNXU5ZXEK6et0SVlFJ20ccRaHvH2smn2CNxmLv&s=10",
-      "https://picsum.photos/seed/arugam-bay-detail-1/800/600.jpg",
-      "https://picsum.photos/seed/arugam-bay-detail-2/800/600.jpg",
+      "https://c0.wallpaperflare.com/preview/228/805/220/sri-lanka-arugam-bay-beach.jpg",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-jYcu5eGZw6ensUZZCS51S1Vh1gmGq1CIIywRPibLx9uzqwoVLg1tQ8U&s=10",
     ],
   },
+  {
+    id: "trincomalee",
+    name: "Trincomalee",
+    country: "Sri Lanka",
+    img: "https://lakpura.com/cdn/shop/files/Untitled-1_3cf1d0b1-de58-4d8b-8545-60898a09bdb3.jpg?v=1657266596&width=3840",
+    price: "LKR 36,000",
+    days: "3 Days",
+    rating: "4.8",
+    span: "",
+    category: "Beach",
+    bestTimeToVisit: "May – September",
+    description:
+        "Trincomalee is home to some of Sri Lanka's most pristine beaches, crystal-clear waters, and rich cultural heritage. Explore Nilaveli Beach, snorkel among vibrant coral reefs at Pigeon Island National Park, and enjoy breathtaking coastal scenery.",
+    highlights: [
+        "Relax at Nilaveli and Uppuveli beaches",
+        "Snorkel and dive at Pigeon Island National Park",
+        "Visit the historic Koneswaram Temple",
+        "Whale and dolphin watching during the season",
+    ],
+    gallery: [
+        "https://lakpura.com/cdn/shop/files/Untitled-1_3cf1d0b1-de58-4d8b-8545-60898a09bdb3.jpg?v=1657266596&width=3840",
+        "https://beyondwildplaces.com/wp-content/uploads/2023/10/Trincomalee-travel-guide.jpg",
+        "https://bhlankatours.com/wp-content/uploads/2025/08/Trincomalee-Travel-Guide-2025-%E2%80%93-Beaches-Attractions-Top-Things-to-Do-1024x576.jpg",
+    ],
+    },
 ];

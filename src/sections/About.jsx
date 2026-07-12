@@ -14,12 +14,12 @@ export default function About() {
               Born from a <span className="italic font-normal text-stone-400">passion</span> for travel
             </h2>
             <div className={`space-y-4 ${visible ? "anim-fade-in-up" : "opacity-0"}`} style={{ animationDelay: "0.2s" }}>
-              <p className="text-stone-500 font-light leading-relaxed">
-                Wanderly started in 2020 with a simple idea: travel should be personal, authentic, and effortless. We believe the best journeys aren&apos;t just about where you go, but how you feel when you&apos;re there.
-              </p>
-              <p className="text-stone-500 font-light leading-relaxed">
-                Our team of local experts and travel designers craft every itinerary by hand, ensuring each trip is as unique as the traveler taking it. No templates. No crowds. Just genuine experiences.
-              </p>
+            <p className="text-stone-500 font-light leading-relaxed">
+                Sri Lanka is an island of timeless heritage, breathtaking landscapes, and warm hospitality. From ancient kingdoms and misty hill country to golden beaches and extraordinary wildlife, every journey reveals a new side of the island's unique charm.
+            </p>
+            <p className="text-stone-500 font-light leading-relaxed">
+                We showcase the very best of Sri Lanka, helping travelers discover iconic landmarks alongside hidden gems. Every destination is carefully presented to inspire authentic experiences, meaningful connections, and unforgettable memories across the Pearl of the Indian Ocean.
+            </p>
             </div>
             <div className={`grid grid-cols-3 gap-6 mt-10 ${visible ? "anim-fade-in-up" : "opacity-0"}`} style={{ animationDelay: "0.3s" }}>
               {aboutStats.map((s) => (

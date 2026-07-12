@@ -57,10 +57,10 @@ export default function Showcase() {
           <div>
             <span className={`inline-block text-xs font-semibold text-stone-500 uppercase tracking-widest mb-3 ${visible ? "anim-fade-in" : "opacity-0"}`}>Why Wanderly</span>
             <h2 className={`text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight mb-6 ${visible ? "anim-fade-in-up" : "opacity-0"}`} style={{ animationDelay: "0.1s" }}>
-              Travel with <span className="italic font-normal text-stone-400">confidence</span>
+                Travel with <span className="italic font-normal text-stone-400">confidence</span>
             </h2>
             <p className={`text-stone-500 font-light leading-relaxed mb-10 ${visible ? "anim-fade-in-up" : "opacity-0"}`} style={{ animationDelay: "0.2s" }}>
-              We take care of every detail so you can focus on what matters — creating unforgettable memories. From the moment you book until you return home.
+                We take care of every detail so you can simply enjoy the wonders of Sri Lanka. From ancient heritage and lush hill country to pristine beaches and unforgettable wildlife, every journey is crafted for memories that last a lifetime.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               {features.map((f, i) => (

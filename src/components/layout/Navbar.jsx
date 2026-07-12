@@ -23,7 +23,7 @@ export default function Navbar({ onNavigate }) {
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         <Link to="/" className={`text-xl font-semibold tracking-tight flex items-center gap-2 transition-colors duration-300 ${logoColor}`}>
           <ExploreIcon sx={{ fontSize: 22 }} />
-          Wanderly
+          Sri Lanka Travel
         </Link>
 
         <div className="hidden md:flex items-center gap-8">
